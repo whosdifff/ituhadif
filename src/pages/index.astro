@@ -1,0 +1,52 @@
+
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
+---
+
+<Layout
+  title="Portfolio itu.hadif"
+  description="Hey there I'm Hadif and this is my portfolio."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experience">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experience
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="project">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Project
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about-me">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        About Me
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>

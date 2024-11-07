@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Currently",
+    title: "Vice Secreatary",
+    company: "MMBS",
+    description:
+      "MMBS stands for Multimediaboard SEPERMAI. MMBS is my school's multimedia team, with departments for photography, design, social media, and bulletin. We capture, create, and share moments that celebrate our school community.",
+    link: "https://www.tiktok.com/@squadmultimediasepermai",
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
